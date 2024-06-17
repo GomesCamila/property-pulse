@@ -1,8 +1,12 @@
-export const metadata = {
-  title: "test",
-};
+import Link from "next/link";
+
 const HomePage = () => {
-  return <div>Home Page</div>;
+  return (
+    <div>
+      <h1>Welcome</h1>
+      <Link href="/properties">Show Properties</Link>
+    </div>
+  );
 };
 
 export default HomePage;

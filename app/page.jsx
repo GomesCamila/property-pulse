@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import InfoBoxes from "@/components/InfoBxes";
+import InfoBoxes from "@/components/InfoBoxes";
 
 const HomePage = () => {
   return (

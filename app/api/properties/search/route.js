@@ -3,10 +3,10 @@ import Property from "@/models/Property";
 
 // GET /api/properties/search
 export async function GET(req) {
+    const { searchParams } = new URL(req.url);
     try {
         await connectDB();
 
-        const { searchParams } = new URL(req.url);
         const location = searchParams.get("location");
         const propertyType = searchParams.get("propertyType");
         const locationPattern = new RegExp(location, "i");

@@ -19,6 +19,14 @@ async function fetchProperties({ showFeatured = false } = {}) {
 
         return res.json();
     } catch (error) {
+        if (
+            error instanceof Error &&
+            "digest" in error &&
+            error.digest === "DYNAMIC_SERVER_USAGE"
+        ) {
+            throw error;
+        }
+
         console.log(error);
         return [];
     }
